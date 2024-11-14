@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {StyleSheet, Text, TextInput,View, Button, TouchableOpacity} from 'react-native';
 import globalStyles from "../styles/globalStyles";
 

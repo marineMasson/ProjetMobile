@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import Connexion from './screens/Connexion'
+import TabNavigator from "./components/TabNavigator";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Connexion" screenOptions={{headerShown:false}}>
-        <Tab.Screen name="Connexion" component={Connexion}/>
+        <Tab.Screen name="Tabs" component={TabNavigator}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
