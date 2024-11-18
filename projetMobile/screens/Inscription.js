@@ -12,7 +12,7 @@ export default function Inscription(){
     const[confirmation, setConfirmation] = useState('');
     
     return(
-        <View styles={globalStyles.container}>
+        <View style={globalStyles.container}>
             <Text style={globalStyles.title}>Nom</Text>
             <TextInput
                 style={globalStyles.input}
@@ -27,14 +27,14 @@ export default function Inscription(){
                 onChangeText={setPrenom}
             />
 
-            <Text style={globalStyles.button}>Email</Text>
+            <Text style={globalStyles.title}>Email</Text>
             <TextInput
                 style={globalStyles.input}
                 value={email}
                 onChangeText={setEmail}
             />
 
-            <Text style={globalStyles.button}>Mot de passe</Text>
+            <Text style={globalStyles.title}>Mot de passe</Text>
             <TextInput
                 style={globalStyles.input}
                 value={password}
@@ -42,7 +42,7 @@ export default function Inscription(){
                 secureTextEntry={true}
             />
 
-            <Text style={globalStyles.button}>Confirmer mot de passe</Text>
+            <Text style={globalStyles.title}>Confirmer mot de passe</Text>
             <TextInput
                 style={globalStyles.input}
                 value={confirmation}

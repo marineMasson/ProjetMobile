@@ -1,5 +1,6 @@
 import Connexion from '../screens/Connexion';
 import Inscription from '../screens/Inscription';
+import Utilisateur from '../screens/Utilisateur';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -7,30 +8,26 @@ const Stack = createNativeStackNavigator();
 export default function TabNavigator(){
     return (
         <Stack.Navigator
-            initialRouteName='Tabs/Connexion'
+            initialRouteName="Connexion"
             screenOptions={{
                 headerShown: false,
             }}>
         
             <Stack.Screen
-                initialParams={{
-                screen: 'Tabs/Connexion',
-                }}
-                options={{
-                    unmountOnBlur:true,
-                }}
-                name = 'Connexion'
+                name="Connexion"
                 component={Connexion}
+                options={{ unmountOnBlur: true }}
             />
             <Stack.Screen
-                initialParams={{
-                    screen: 'Tabs/Inscription',
-                    }}
-                    options={{
-                        unmountOnBlur:true,
-                    }}
-                    name = 'Inscription'
-                    component={Inscription}
+                name="Inscription"
+                component={Inscription}
+                options={{ unmountOnBlur: true }}
+        
+            />
+            <Stack.Screen
+                name="Utilisateur"
+                component={Utilisateur}
+                options={{unmountOnBlur: true}}
             />
 
         </Stack.Navigator>
