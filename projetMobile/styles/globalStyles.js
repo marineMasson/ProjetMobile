@@ -35,6 +35,11 @@ export const darkColors = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: "#FF2B2B"
+    },
+    informationText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: "#228b22"
     }
 });
 
@@ -72,6 +77,11 @@ export const lightColors = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: "#FF2B2B"
+    },
+    informationText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: "#228b22"
     }
 });
 
