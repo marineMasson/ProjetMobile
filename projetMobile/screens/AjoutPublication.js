@@ -20,6 +20,7 @@ export default function Connexion(){
 
     const addPublication = () => {
         setPublicationAdd(true);
+        navigation.navigate('Menu');
     }
 
     return(
@@ -50,12 +51,12 @@ export default function Connexion(){
             />
             
 
-            <TouchableOpacity 
-                style={styles.button} 
+
+            <CustomButton
+                title="Envoyer"
                 onPress={addPublication}
-            >
-                <Text style={styles.buttonText}>Envoyer</Text>
-            </TouchableOpacity>
+            />
+
 
             {publicationAdd && (
                 <text style={styles.informationText}>La publication a été envoyée</text>

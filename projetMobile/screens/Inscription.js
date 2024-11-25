@@ -2,6 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import {useState} from 'react';
 import {StyleSheet, Text, TextInput,View, Button, TouchableOpacity} from 'react-native';
 import globalStyles from "../styles/globalStyles";
+import CustomButton from "../components/CustomButton";
 
 export default function Inscription(){
     const navigation = useNavigation();
@@ -50,13 +51,10 @@ export default function Inscription(){
                 secureTextEntry={true}
             />
 
-            <TouchableOpacity 
-                style={globalStyles.button} 
+            <CustomButton
+                title="Inscription"
                 onPress={() => navigation.navigate('Menu')}
-            >
-                <Text style={globalStyles.buttonText}>Inscription</Text>
-            </TouchableOpacity>
-
+            />
 
         </View>
     )

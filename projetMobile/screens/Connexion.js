@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {StyleSheet, Text, TextInput,View, Button, TouchableOpacity} from 'react-native';
 import globalStyles, { darkColors, lightColors } from "../styles/globalStyles";
 import { Dimensions } from "react-native";
+import CustomButton from "../components/CustomButton";
 
 const {width, height} = Dimensions.get('window');
 
@@ -15,7 +16,7 @@ export default function Connexion(){
     const styles = isDarkTheme ? darkColors : lightColors;
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Email</Text>
+            <Text style={styles.title}>eeee</Text>
             <TextInput
                 style={styles.input}
                 value={email}
@@ -29,21 +30,19 @@ export default function Connexion(){
                 secureTextEntry={true}
             />
 
-            <TouchableOpacity 
-                style={styles.button} 
+
+            <CustomButton
+                title="Connexion"
                 onPress={() => navigation.navigate('Menu')}
-            >
-                <Text style={styles.buttonText}>Connexion</Text>
-            </TouchableOpacity>
+            />
+            
 
             <Text style={styles.title}>Pas encore de compte ?</Text>
 
-            <TouchableOpacity 
-                style={styles.button} 
+            <CustomButton
+                title="Inscription"
                 onPress={() => navigation.navigate('Inscription')}
-            >
-                <Text style={styles.buttonText}>Inscription</Text>
-            </TouchableOpacity>
+            />
 
             
         </View>
