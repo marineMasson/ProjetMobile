@@ -51,26 +51,20 @@ export default function Connexion(){
                 secureTextEntry={true}
             />
 
-            <TouchableOpacity 
-                style={styles.button} 
+            <CustomButton
+                title="Confirmer"
                 onPress={() => navigation.navigate('Utilisateur')}
-            >
-                <Text style={styles.buttonText}>Confirmer</Text>
-            </TouchableOpacity>
+            />
 
-            <TouchableOpacity 
-                style={styles.button} 
+            <CustomButton
+                title="Déconnexion"
                 onPress={() => navigation.navigate('Connexion')}
-            >
-                <Text style={styles.buttonText}>Déconnexion</Text>
-            </TouchableOpacity>
+            />
 
-            <TouchableOpacity 
-                style={styles.buttonDelete} 
+            <CustomButton
+                title="Supprimer le compte"
                 onPress={handleDeleteAccount}
-            >
-                <Text style={styles.buttonText}>Supprimer le compte</Text>
-            </TouchableOpacity>
+            />
 
             {accountDeleted && (
                 <text style={styles.deleteText}>Le compte a été supprimé</text>

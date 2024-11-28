@@ -16,7 +16,7 @@ export default function Connexion(){
     const styles = isDarkTheme ? darkColors : lightColors;
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>eeee</Text>
+            <Text style={styles.title}>Email</Text>
             <TextInput
                 style={styles.input}
                 value={email}
