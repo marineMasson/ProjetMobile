@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import {useState} from 'react';
 import {StyleSheet, Text, TextInput,View, Button, TouchableOpacity} from 'react-native';
-import globalStyles from "../styles/globalStyles";
+import globalStyles, { darkColors, lightColors } from "../styles/globalStyles";
 import CustomButton from "../components/CustomButton";
 
 export default function Inscription(){
@@ -11,41 +11,44 @@ export default function Inscription(){
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const[confirmation, setConfirmation] = useState('');
+
+    const[isDarkTheme, setIsDarkTheme] = useState(true);
+    const styles = isDarkTheme ? darkColors : lightColors;
     
     return(
-        <View style={globalStyles.container}>
-            <Text style={globalStyles.title}>Nom</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Nom</Text>
             <TextInput
-                style={globalStyles.input}
+                style={styles.input}
                 value={nom}
                 onChangeText={setNom}
             />
 
-            <Text style={globalStyles.title}>Prénom</Text>
+            <Text style={styles.title}>Prénom</Text>
             <TextInput
-                style={globalStyles.input}
+                style={styles.input}
                 value={prenom}
                 onChangeText={setPrenom}
             />
 
-            <Text style={globalStyles.title}>Email</Text>
+            <Text style={styles.title}>Email</Text>
             <TextInput
-                style={globalStyles.input}
+                style={styles.input}
                 value={email}
                 onChangeText={setEmail}
             />
 
-            <Text style={globalStyles.title}>Mot de passe</Text>
+            <Text style={styles.title}>Mot de passe</Text>
             <TextInput
-                style={globalStyles.input}
+                style={styles.input}
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry={true}
             />
 
-            <Text style={globalStyles.title}>Confirmer mot de passe</Text>
+            <Text style={styles.title}>Confirmer mot de passe</Text>
             <TextInput
-                style={globalStyles.input}
+                style={styles.input}
                 value={confirmation}
                 onChangeText={setConfirmation}
                 secureTextEntry={true}

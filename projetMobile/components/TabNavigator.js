@@ -1,6 +1,7 @@
 import Connexion from '../screens/Connexion';
 import Inscription from '../screens/Inscription';
 import Utilisateur from '../screens/Utilisateur';
+import Menu from '../screens/Menu';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -27,6 +28,11 @@ export default function TabNavigator(){
             <Stack.Screen
                 name="Utilisateur"
                 component={Utilisateur}
+                options={{unmountOnBlur: true}}
+            />
+            <Stack.Screen
+                name="Menu"
+                component={Menu}
                 options={{unmountOnBlur: true}}
             />
 
