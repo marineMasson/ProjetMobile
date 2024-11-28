@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 // pour ajouter une icône à la barre de recherche
 
 const SearchBar = ({ value, onChangeText, placeholder }) => {
+  const [searchValue, setSearchValue] = useState('');
+
   return (
     <View style={styles.container}>
       <Ionicons name="search" size={20} color="#ccc" style={styles.icon} />
@@ -16,4 +18,7 @@ const SearchBar = ({ value, onChangeText, placeholder }) => {
       />
     </View>
   );
+
+  
 };
+export default SearchBar;
