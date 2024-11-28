@@ -5,9 +5,6 @@ import globalStyles, { darkColors, lightColors } from "../styles/globalStyles";
 import { Dimensions } from "react-native";
 import CustomButton from "../components/CustomButton";
 
-
-import Inscription from "./Inscription";
-
 const {width, height} = Dimensions.get('window');
 
 export default function Connexion(){

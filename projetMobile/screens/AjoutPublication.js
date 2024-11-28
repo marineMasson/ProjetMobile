@@ -3,6 +3,8 @@ import {useState} from 'react';
 import {StyleSheet, Text, TextInput,View, Button, TouchableOpacity} from 'react-native';
 import globalStyles, { darkColors, lightColors } from "../styles/globalStyles";
 import { Dimensions } from "react-native";
+import MenuBas from "../components/MenuBas";
+import CustomButton from "../components/CustomButton";
 
 const {width, height} = Dimensions.get('window');
 
@@ -61,6 +63,8 @@ export default function Connexion(){
             {publicationAdd && (
                 <text style={styles.informationText}>La publication a été envoyée</text>
             )}
+
+            <MenuBas/>
             
         </View>
     );
